@@ -1,23 +1,16 @@
 @extends('layouts.main')
 
-{{-- Section Title --}}
 @section('title')
     Kelas
 @endsection
 
-{{-- Section Content --}}
 @section('content')
     <div class="row">
-
-        {{-- Title Page : Start --}}
         <div class="col-12">
             <h1 class="h1 mb-3 fw-bold">
                 {{ $title }}
             </h1>
         </div>
-        {{-- Title Page : End --}}
-
-        {{-- Request Params : Start --}}
         <div class="col-12">
             <form action="{{ route('kelas.index') }}" method="get">
                 @csrf
@@ -77,18 +70,14 @@
                         @endauth
                     </tr>
                     @endforeach
-                    {{-- Dummy Data --}}
-
+ 
                 </tbody>
             </table>
         </div>
-        {{-- Table : End --}}
-
-        {{-- Pagination : Start --}}
         <div class="col-12">
             {{ $classes->links() }}
         </div>
-        {{-- Pagination : End --}}
+
 
     </div>
 @endSection

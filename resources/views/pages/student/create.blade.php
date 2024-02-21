@@ -1,27 +1,21 @@
 @extends('layouts.main')
 
-{{-- Section Title --}}
 @section('title')
     Tambah Siswa
 @endsection
 
-{{-- Section Content --}}
 @section('content')
     <div class="row">
 
-        {{-- Title Page : Start --}}
+        
         <div class="col-12">
             <h1 class="h1 mb-3 fw-bold">
                 Tambah Siswa
             </h1>
         </div>
-        {{-- Title Page : End --}}
 
-        {{-- Form : Start --}}
         <form action="{{ route('student.store') }}" method="post" enctype="multipart/form-data" class="row">
             @csrf
-
-            {{-- Input NISN : Start --}}
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="mb-3">
                     <label for="nis" class="form-label">Masukkan NISN</label>
@@ -35,9 +29,6 @@
                     >
                 </div>
             </div>
-            {{-- Input NISN : End --}}
-
-            {{-- Dropdown Kelas : Start --}}
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="mb-3">
                     <label for="kelas_id" class="form-label">Pilih Kelas</label>
@@ -48,9 +39,6 @@
                     </select>
                 </div>
             </div>
-            {{-- Dropdown Kelas : End --}}
-
-            {{-- Input Nama Kelas : Start --}}
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="mb-3">
                     <label for="nama" class="form-label">Masukkan Nama Siswa</label>
@@ -64,9 +52,7 @@
                     >
                 </div>
             </div>
-            {{-- Input Nama Kelas : End --}}
 
-            {{-- Input Tanggal Lahir : Start --}}
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="mb-3">
                     <label for="tanggal_lahir" class="form-label">Masukkan Tanggal Lahir</label>
@@ -79,9 +65,7 @@
                     >
                 </div>
             </div>
-            {{-- Input Tanggal Lahir : End --}}
 
-            {{-- Textarea Alamat : Start --}}
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="mb-3">
                     <label for="alamat" class="form-label">Masukkan Alamat</label>
@@ -94,19 +78,14 @@
                     ></textarea>
                 </div>
             </div>
-            {{-- Textarea Alamat : End --}}
-
-            {{-- Button Submit : Start --}}
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary fw-bold">
                     <i class="bi bi-plus-circle"></i>
                     Tambah
                 </button>
             </div>
-            {{-- Button Submit : End --}}
 
         </form>
-        {{-- Form : End --}}
 
     </div>
 @endsection

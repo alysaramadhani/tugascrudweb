@@ -34,24 +34,12 @@
             @include('templates.navbar')
         @endauth
 
-
-        {{-- Content : Start --}}
         <div class="container m-3 content">
             @yield('content')
         </div>
-        {{-- Content : End --}}
-
-
-
     </div>
-    {{-- Wrapper : End --}}
 
-    {{-- Javascript Bootstrap : Start --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    {{-- Javascript Bootstrap : End --}}
-
-
-
 </body>
 
 </html>

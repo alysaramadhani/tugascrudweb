@@ -1,26 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-
-        {{-- Website Name : Start --}}
        @auth
         <a class="navbar-brand" href="{{ route('dashboard') }}">Dashboard</a>
         @else
         <a class="navbar-brand" href="{{ route('dashboard') }}">Website</a>
         @endauth
-        
-
-
-
-        {{-- Website Name : End --}}
-
-        {{-- Toggler : Start --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        {{-- Toggler : End --}}
 
-        {{-- Navbar Items : Start --}}
         <div class="collapse navbar-collapse" id="navbarNav">
             @auth
             @else

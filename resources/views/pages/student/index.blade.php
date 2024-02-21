@@ -8,16 +8,12 @@
 {{-- Section Content --}}
 @section('content')
     <div class="row">
-
-        {{-- Title Page : Start --}}
         <div class="col-12">
             <h1 class="h1 mb-3 fw-bold">
                 {{ $title }}
             </h1>
         </div>
-        {{-- Title Page : End --}}
 
-        {{-- Request Params : Start --}}
         <div class="col-12">
             <form action="{{ route('student.index') }}" method="get">
                 @csrf
@@ -35,9 +31,6 @@
                 </div>
             </form>
         </div>
-        {{-- Request Params : End
-
-        {{-- Button Add : Start --}}
         <div class="col-12">
             <div class="d-grid gap-2">
                 <a href="{{ route('student.create') }}" class="btn btn-primary fw-bold">
@@ -46,9 +39,6 @@
                 </a>
             </div>
         </div>
-        {{-- Button Add : End
-
-        {{-- Table : Start --}}
         <div class="col-12 my-3">
             <table class="table table-striped table-hover table-bordered">
                 <thead>
@@ -64,8 +54,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    {{-- Dummy Data --}}
                     @foreach ($students as $student)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
@@ -96,18 +84,11 @@
                         @include('pages.student.modal')
 
                     @endforeach
-                    {{-- Dummy Data --}}
-
                 </tbody>
             </table>
         </div>
-        {{-- Table : End --}}
-
-        {{-- Pagination : Start --}}
         <div class="col-12">
             {{ $students->links() }}
         </div>
-        {{-- Pagination : End --}}
-
     </div>
 @endSection

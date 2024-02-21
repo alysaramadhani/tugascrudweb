@@ -13,7 +13,7 @@ class StudentsController extends Controller
     {
         if ($request->has('search')) {
 
-            $students = Students::where('nama', 'like', '%' . $request->search . '%')->paginate(5);
+            $students = Students::where('nama', 'like', '%' . $request->search . '%')->paginate(10);
 
             return view('pages.student.index', [
                 'title' => 'Data Siswa',
@@ -22,7 +22,7 @@ class StudentsController extends Controller
 
         } else {
 
-            $students = Students::paginate(5);
+            $students = Students::paginate(10);
 
             return view('pages.student.index', [
                 'title' => 'Data Siswa',
